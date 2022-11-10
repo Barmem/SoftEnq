@@ -1,46 +1,50 @@
-<div class="main_div">
-    <div class="main_div-nodeImg">
-        <img src=".\IMG_20210820_195247.jpg" class="img_Class" title="Да, это я">
+<body class="main_body">
+    <div class="main_div">
+        <div class="main_div-nodeImg rainbow-border-loop">
+            <img src=".\IMG_20210820_195247.jpg" class="img_Class" title="Да, это я">
+        </div>
+        <div class="main_div-nodeGroup wigle-border-loop">
+            <div class="main_div-node">
+                <div class="main_div-node-Title">
+                    <div>ФИО<span style="color: rgb(212, 212, 212)">=</span></div>
+                </div>
+                <div class="main_div-node-Title">
+                    <div>Дата Рождения<span style="color: rgb(212, 212, 212)">=</span></div>
+                </div>
+                <div class="main_div-node-Title">
+                    <div>Университет<span style="color: rgb(212, 212, 212)">=</span></div>
+                </div>
+                <div class="main_div-node-Title">
+                    <div>Группа<span style="color: rgb(212, 212, 212)">=</span></div>
+                </div>
+            </div>
+            <div class="main_div-node">
+                <div class="main_div-node-Text">
+                    <div>"Неймышев Игорь Константинович"</div>
+                </div>
+                <div class="main_div-node-Text">
+                    <div><span style="color: rgb(181, 206, 168)">12.11.1998</span></div>
+                </div>
+                <div class="main_div-node-Text">
+                    <div>"ОмГУ Им. Достоевского"</div>
+                </div>
+                <div class="main_div-node-Text">
+                    <div>"МИБ-001"</div>
+                </div>
+            </div>
     </div>
-    <div class="main_div-nodeGroup">
-        <div class="main_div-node">
-            <div class="main_div-node-Title">
-                <div>ФИО:</div>
-            </div>
-            <div class="main_div-node-Title">
-                <div>Дата Рождения: </div>
-            </div>
-            <div class="main_div-node-Title">
-                <div>Университет:</div>
-            </div>
-            <div class="main_div-node-Title">
-                <div>Группа:</div>
-            </div>
-        </div>
-        <div class="main_div-node">
-            <div class="main_div-node-Title">
-                <div>Неймышев Игорь Константинович</div>
-            </div>
-            <div class="main_div-node-Title">
-                <div>12.11.1998</div>
-            </div>
-            <div class="main_div-node-Title">
-                <div>ОмГУ Им. Достоевского</div>
-            </div>
-            <div class="main_div-node-Title">
-                <div>МИБ-001</div>
-            </div>
-        </div>
-</div>
-
-
+</body>
+<head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans">
 <style>
+    .main_body {
+        background-color: rgb(30, 30, 30);
+    }
     .main_div {
         display: flex;
         max-width:25cm;
         justify-content: center;
         margin: auto;
-        
         /* flex-direction: column; */
     }
     .main_div-nodeImg {
@@ -49,14 +53,14 @@
         align-items: flex-end;
         max-width: 40%;
         /* min-width: 33%; */
-        border: 2px solid #252525;
+        border: 2px solid rgb(79, 79, 79);
         border-radius: 10px;
 
     }
     .main_div-nodeGroup {
         display: flex;
         align-items: flex-start;
-        border: 2px solid #252525;
+        border: 2px solid rgb(79, 79, 79);
         border-radius: 10px;
         padding-right: 3%;
     }
@@ -69,14 +73,40 @@
     .main_div-node-Title {
         display: flex;
         white-space:nowrap;
+        /* font-weight:bold; */
+        color: rgb(156, 220, 254);
+        font-family: 'Open Sans', serif;
     }
     .main_div-node-Text {
         display: flex;
+        white-space:nowrap;
+        color: rgb(195, 145, 98);
+        font-family: 'Open Sans', serif;
     }
     .img_Class {
         display: flex;
         max-width: 100%;
         border-radius: 8px;
     }
-    
+    .rainbow-border-loop {
+        animation: rainbow 5s infinite; 
+    }
+    @keyframes rainbow{
+        0%{border: 2px solid rgb(170, 0, 0);}
+        17%{border: 2px solid rgb(170, 46, 0);}
+        34%{border: 2px solid  rgb(170, 110, 0);}
+        50%{border: 2px solid  rgb(170, 170, 0);}
+        67%{border: 2px solid  rgb(170, 110, 0);}
+        84%{border: 2px solid rgb(170, 46, 0);}
+        100%{border: 2px solid rgb(170, 0, 0);}
+    }
+    .wigle-border-loop {
+        animation: wigle 10s infinite; 
+    }
+    @keyframes wigle{
+        0%{border-radius: 20px;}
+        50%{border-radius: 1px;}
+        100%{border-radius: 20px;}
+    }
 </style>
+</head>
