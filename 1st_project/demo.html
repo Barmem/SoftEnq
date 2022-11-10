@@ -25,7 +25,7 @@
                 <div>12.11.1998</div>
             </div>
             <div class="main_div-node-Title">
-                <div class="main_div-node-Text">ОмГУ Им. Достоевского</div>
+                <div>ОмГУ Им. Достоевского</div>
             </div>
             <div class="main_div-node-Title">
                 <div>МИБ-001</div>
@@ -35,50 +35,47 @@
 
 
 <style>
+    .main_div {
+        display: flex;
+        max-width:25cm;
+        justify-content: center;
+        margin: auto;
+        
+        /* flex-direction: column; */
+    }
     .main_div-nodeImg {
         display: flex;
         /* justify-content: center; */
         align-items: flex-end;
         max-width: 40%;
+        /* min-width: 33%; */
         border: 2px solid #252525;
-        border-radius: 0%;
+        border-radius: 10px;
 
     }
     .main_div-nodeGroup {
         display: flex;
-        /* justify-content: center; */
         align-items: flex-start;
         border: 2px solid #252525;
-        border-radius: 0%;
+        border-radius: 10px;
 
     }
     .main_div-node {
         display: flex;
-        /* justify-content: center; */
         flex-direction: column;
-        max-width: 100%;
         margin-left: 2%;
         margin-top: 2%;
-        flex-wrap: wrap;
     }
     .main_div-node-Title {
         display: flex;
-        flex-direction: row;
     }
     .main_div-node-Text {
         display: flex;
-        overflow:hidden;
-    }
-    .main_div {
-        display: flex;
-        max-width:25cm;
-        justify-content: center;
-        /* margin: auto; */
-        /* flex-direction: column; */
     }
     .img_Class {
         display: flex;
         max-width: 100%;
+        border-radius: 8px;
     }
     
 </style>
