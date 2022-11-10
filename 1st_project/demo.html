@@ -1,21 +1,84 @@
 <div class="main_div">
-    <div class="main_div-node">
-        <img src="./">
+    <div class="main_div-nodeImg">
+        <img src=".\IMG_20210820_195247.jpg" class="img_Class" title="Да, это я">
     </div>
+    <div class="main_div-nodeGroup">
+        <div class="main_div-node">
+            <div class="main_div-node-Title">
+                <div>ФИО:</div>
+            </div>
+            <div class="main_div-node-Title">
+                <div>Дата Рождения: </div>
+            </div>
+            <div class="main_div-node-Title">
+                <div>Университет:</div>
+            </div>
+            <div class="main_div-node-Title">
+                <div>Группа:</div>
+            </div>
+        </div>
+        <div class="main_div-node">
+            <div class="main_div-node-Title">
+                <div>Неймышев Игорь Константинович</div>
+            </div>
+            <div class="main_div-node-Title">
+                <div>12.11.1998</div>
+            </div>
+            <div class="main_div-node-Title">
+                <div class="main_div-node-Text">ОмГУ Им. Достоевского</div>
+            </div>
+            <div class="main_div-node-Title">
+                <div>МИБ-001</div>
+            </div>
+        </div>
 </div>
 
 
 <style>
+    .main_div-nodeImg {
+        display: flex;
+        /* justify-content: center; */
+        align-items: flex-end;
+        max-width: 40%;
+        border: 2px solid #252525;
+        border-radius: 0%;
+
+    }
+    .main_div-nodeGroup {
+        display: flex;
+        /* justify-content: center; */
+        align-items: flex-start;
+        border: 2px solid #252525;
+        border-radius: 0%;
+
+    }
     .main_div-node {
         display: flex;
         /* justify-content: center; */
+        flex-direction: column;
+        max-width: 100%;
+        margin-left: 2%;
+        margin-top: 2%;
+        flex-wrap: wrap;
     }
-    .main_div-node-title {
-        color: red;
+    .main_div-node-Title {
+        display: flex;
+        flex-direction: row;
+    }
+    .main_div-node-Text {
+        display: flex;
+        overflow:hidden;
     }
     .main_div {
         display: flex;
+        max-width:25cm;
         justify-content: center;
+        /* margin: auto; */
         /* flex-direction: column; */
     }
+    .img_Class {
+        display: flex;
+        max-width: 100%;
+    }
+    
 </style>
