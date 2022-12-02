@@ -22,6 +22,12 @@
                 <div class="main_div-node-Title">
                     <div>Группа<span style="color: rgb(212, 212, 212)">=</span></div>
                 </div>
+                <div class="main_div-node-Title">
+                    <div>Ввод<span style="color: rgb(212, 212, 212)">=</span></div>
+                </div>
+                <div class="main_div-node-Title">
+                    <div>Вывод<span style="color: rgb(212, 212, 212)">=</span></div>
+                </div>
             </div>
             <div class="main_div-node">
                 <div class="main_div-node-Text">
@@ -35,6 +41,12 @@
                 </div>
                 <div class="main_div-node-Text">
                     <div>"МИБ-001"</div>
+                </div>
+                <div class="main_div-node-Text">
+                    <input onchange="changeHandler(event)" />
+                </div>
+                <div class="main_div-node-Text">
+                    <div id="output"></div>
                 </div>
             </div>
     </div>
@@ -124,6 +136,11 @@
     }
     function borderShrinker(event) {
         console.log("event", event)
+    }
+    function changeHandler(event) {
+        console.log("event", event.target.value)
+        let element = document.getElementById("output")
+        element.innerHTML = `"` + event.target.value + `"`
     }
 </script>
 </head>
