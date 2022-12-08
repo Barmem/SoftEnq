@@ -9,70 +9,30 @@
             <img src=".\IMG_20210820_195247.jpg" class="img_Class" title="Да, это я">
         </div>
         <div class="main_div-nodeGroup wigle-border-loop">
-            <!-- <div class="main_div-node">
-                <div class="main_div-node-Title">
-                    <div>ФИО<span style="color: rgb(212, 212, 212)">=</span></div>
-                </div>
-                <div class="main_div-node-Title">
-                    <div>Дата Рождения<span style="color: rgb(212, 212, 212)">=</span></div>
-                </div>
-                <div class="main_div-node-Title">
-                    <div>Университет<span style="color: rgb(212, 212, 212)">=</span></div>
-                </div>
-                <div class="main_div-node-Title">
-                    <div>Группа<span style="color: rgb(212, 212, 212)">=</span></div>
-                </div>
-                <div class="main_div-node-Title">
-                    <div>Ввод<span style="color: rgb(212, 212, 212)">=</span></div>
-                </div>
-                <div class="main_div-node-Title">
-                    <div>Вывод<span style="color: rgb(212, 212, 212)">=</span></div>
-                </div>
-            </div>
-            <div class="main_div-node">
-                <div class="main_div-node-Text">
-                    <div>"Неймышев Игорь Константинович"</div>
-                </div>
-                <div class="main_div-node-Text">
-                    <div><span style="color: rgb(181, 206, 168)">12.11.1998</span></div>
-                </div>
-                <div class="main_div-node-Text">
-                    <div>"ОмГУ Им. Достоевского"</div>
-                </div>
-                <div class="main_div-node-Text">
-                    <div>"МИБ-001"</div>
-                </div>
-                <div class="main_div-node-Text">
-                    <input onchange="changeHandler(event)" />
-                </div>
-                <div class="main_div-node-Text">
-                    <div id="output"></div>
-                </div>
-            </div> -->
             <table>
                 <tr>
-                    <td></td>
-                    <td></td>
+                    <td class="main_div-node-Title">ФИО<span style="color: rgb(212, 212, 212)">=</span></td>
+                    <td class="main_div-node-Text">"Неймышев Игорь Константинович"</td>
                 </tr>
                 <tr>
-                    <td></td>
-                    <td></td>
+                    <td class="main_div-node-Title"><div>Дата Рождения<span style="color: rgb(212, 212, 212)">=</span></div></td>
+                    <td class="main_div-node-Text"><div><span style="color: rgb(181, 206, 168)">12.11.1998</span></div></td>
                 </tr>
                 <tr>
-                    <td></td>
-                    <td></td>
+                    <td class="main_div-node-Title"><div>Университет<span style="color: rgb(212, 212, 212)">=</span></div></td>
+                    <td class="main_div-node-Text"><div>"ОмГУ Им. Достоевского"</div></td>
                 </tr>
                 <tr>
-                    <td></td>
-                    <td></td>
+                    <td class="main_div-node-Title"><div>Группа<span style="color: rgb(212, 212, 212)">=</span></div></td>
+                    <td class="main_div-node-Text"><div>"МИБ-001"</div></td>
                 </tr>
                 <tr>
-                    <td></td>
-                    <td></td>
+                    <td class="main_div-node-Title"><div>Ввод<span style="color: rgb(212, 212, 212)">=</span></div></td>
+                    <td class="main_div-node-Text"><input onchange="changeHandler(event)" /></td>
                 </tr>
                 <tr>
-                    <td></td>
-                    <td></td>
+                    <td class="main_div-node-Title"><div>Вывод<span style="color: rgb(212, 212, 212)">=</span></div></td>
+                    <td class="main_div-node-Text"><div id="output"></div></td>
                 </tr>
             </table>
     </div>
@@ -80,85 +40,24 @@
 <head>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans">
 <style>
-    @media screen and (min-width: 9cm) {
-        .main_body {
-            background-color: rgb(30, 30, 30);
-        }
+    @media screen and (min-width: 12.5cm) {
+        
         .main_div {
             display: flex;
             max-width:25cm;
             justify-content: center;
             margin: auto;
-            /* flex-direction: column; */
         }
         
         .main_div-nodeImg {
             display: flex;
-            /* justify-content: center; */
             align-items: flex-end;
             max-width: 40%;
-            /* min-width: 33%; */
             border: 2px solid rgb(79, 79, 79);
             border-radius: 10px;
-
-        }
-        .main_div-nodeGroup {
-            display: flex;
-            align-items: flex-start;
-            border: 2px solid rgb(79, 79, 79);
-            border-radius: 10px;
-            padding-right: 3%;
-            background-color: rgb(37, 37, 38);
-        }
-        .main_div-node {
-            display: flex;
-            flex-direction: column;
-            margin-left: 2%;
-            margin-top: 2%;
-        }
-        .main_div-node-Title {
-            display: flex;
-            white-space:nowrap;
-            /* font-weight:bold; */
-            color: rgb(156, 220, 254);
-            font-family: 'Open Sans', serif;
-        }
-        .main_div-node-Text {
-            display: flex;
-            white-space:nowrap;
-            color: rgb(195, 145, 98);
-            font-family: 'Open Sans', serif;
-        }
-        .img_Class {
-            display: flex;
-            max-width: 100%;
-            border-radius: 8px;
-        }
-        .rainbow-border-loop {
-            animation: rainbow 5s infinite; 
-        }
-        @keyframes rainbow{
-            0%{border: 2px solid hwb(175 0% 33%);}
-            17%{border: 2px solid hwb(180 0% 33%);}
-            34%{border: 2px solid  hwb(190 0% 33%);}
-            50%{border: 2px solid  hwb(200 0% 33%);}
-            67%{border: 2px solid  hwb(190 0% 33%);}
-            84%{border: 2px solid hwb(180 0% 33%);}
-            100%{border: 2px solid hwb(200 0% 33%);}
-        }
-        .wigle-border-loop {
-            animation: wigle 10s infinite; 
-        }
-        @keyframes wigle{
-            0%{border-radius: 20px;}
-            50%{border-radius: 5px;}
-            100%{border-radius: 20px;}
         }
     }  
-    @media screen and (max-width: 9cm) {
-        .main_body {
-            background-color: rgb(30, 30, 30);
-        }
+    @media screen and (max-width: 12.5cm) {
         .main_div {
             display: flex;
             max-width:25cm;
@@ -166,69 +65,60 @@
             margin: auto;
             flex-direction: column;
         }
-        
         .main_div-nodeImg {
             display: flex;
-            /* justify-content: center; */
             align-items: flex-end;
-            max-width: 40%;
-            /* min-width: 33%; */
-            border: 2px solid rgb(79, 79, 79);
-            border-radius: 10px;
-
-        }
-        .main_div-nodeGroup {
-            display: flex;
-            align-items: flex-start;
-            border: 2px solid rgb(79, 79, 79);
-            border-radius: 10px;
-            padding-right: 3%;
-            background-color: rgb(37, 37, 38);
-        }
-        .main_div-node {
-            display: flex;
-            flex-direction: column;
-            margin-left: 2%;
-            margin-top: 2%;
-        }
-        .main_div-node-Title {
-            display: flex;
-            white-space:nowrap;
-            /* font-weight:bold; */
-            color: rgb(156, 220, 254);
-            font-family: 'Open Sans', serif;
-        }
-        .main_div-node-Text {
-            display: flex;
-            white-space:nowrap;
-            color: rgb(195, 145, 98);
-            font-family: 'Open Sans', serif;
-        }
-        .img_Class {
-            display: flex;
             max-width: 100%;
-            border-radius: 8px;
-        }
-        .rainbow-border-loop {
+            border: 2px solid rgb(79, 79, 79);
+            border-radius: 10px;
+        } 
+    }
+    .main_body {
+        background-color: rgb(30, 30, 30);
+    }
+    .main_div-nodeGroup {
+        display: flex;
+        align-items: flex-start;
+        border: 2px solid rgb(79, 79, 79);
+        border-radius: 10px;
+        padding-right: 3%;
+        background-color: rgb(37, 37, 38);
+    }
+    .main_div-node-Title {
+        color: rgb(156, 220, 254);
+        font-family: 'Open Sans', serif;
+    }
+    .main_div-node-Text {
+        color: rgb(195, 145, 98);
+        font-family: 'Open Sans', serif;
+    }
+    .img_Class {
+        display: flex;
+        max-width: 100%;
+        border-radius: 8px;
+    }
+    .rainbow-border-loop {
             animation: rainbow 5s infinite; 
-        }
-        @keyframes rainbow{
-            0%{border: 2px solid hwb(175 0% 33%);}
-            17%{border: 2px solid hwb(180 0% 33%);}
-            34%{border: 2px solid  hwb(190 0% 33%);}
-            50%{border: 2px solid  hwb(200 0% 33%);}
-            67%{border: 2px solid  hwb(190 0% 33%);}
-            84%{border: 2px solid hwb(180 0% 33%);}
-            100%{border: 2px solid hwb(200 0% 33%);}
-        }
-        .wigle-border-loop {
-            animation: wigle 10s infinite; 
-        }
-        @keyframes wigle{
-            0%{border-radius: 20px;}
-            50%{border-radius: 5px;}
-            100%{border-radius: 20px;}
-        }
+    }
+    @keyframes rainbow{
+        0%{border: 2px solid hwb(175 0% 33%);}
+        17%{border: 2px solid hwb(180 0% 33%);}
+        34%{border: 2px solid  hwb(190 0% 33%);}
+        50%{border: 2px solid  hwb(200 0% 33%);}
+        67%{border: 2px solid  hwb(190 0% 33%);}
+        84%{border: 2px solid hwb(180 0% 33%);}
+        100%{border: 2px solid hwb(200 0% 33%);}
+    }
+    .wigle-border-loop {
+        animation: wigle 10s infinite; 
+    }
+    @keyframes wigle{
+        0%{border-radius: 20px;}
+        50%{border-radius: 5px;}
+        100%{border-radius: 20px;}
+    }
+    td, th {
+        vertical-align:top;
     }
 </style>
 <script>
